@@ -20,7 +20,7 @@ class scissors {
     }
 }
 
-
+const cardsClicker = document.querySelectorAll(".card-div")
 
 
 //Initializing the basic parameters

@@ -8,43 +8,62 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Heart-Janken</h1>
+    <section id="header">
+        <h1>Heart-Janken</h1>
+        <p>Welcome to the best Rock-Paper-Scissors you'll ever play</p>
+    </section>
+    
 
     <!--This div will contain the game and show both players hands and the card chosen and put it on the field-->
+   <section id="main-section">
     <div class="playfield"> 
-        <div class="p1-side">
-            
+        <div class="p2-side">
+            <div class="card-div p2-card1">1</div>
+            <div class="card-div p2-card2">2</div>
+            <div class="card-div p2-card3">3</div>
         </div>
 
 
         <div class="playedCardsField">
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-        <div class="p2-side">
             
+ 
+
+
         </div>
+
+
+
+
+
+
+
+
+
+
+        
+        <div class="p1-side">
+            
+            <div class="card-div p1-card1"><img src="" alt="">1</div>
+            <div class="card-div p1-card2"><img src="" alt="">1</div>
+            <div class="card-div p1-card3"><img src="" alt="">1</div>
+        </div>
+        <!-- <p>P1 SCORE :</p> -->
+        <button class="glow-on-hover">Confirm</button>
     </div>
+   </section>
+
+   <section id="footer">
+        <h3>Rules</h3>
+
+
+   </section>
 
 
 
 
 
 
-
-
-    <script src="js/gameLoop.js"></script>
-
+    
+   <script src="js/gameLoop.js"></script>
 </body>
 </html>
