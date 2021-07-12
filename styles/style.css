@@ -1,22 +1,38 @@
 html,body { 
     padding: 0;
     margin: 0;
+    background-color: #302244;
+  border: 5px solid transparent;
+  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1;
 }
 
 .rock {
-    background-color: red;
+    background-image: url(./img/scissors.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    
 }
 
 .paper {
-    background-color: cadetblue;
+    background-image: url(./img/paper.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
 }
 
 .scissors {
-    background-color: darkolivegreen;
+    background-image: url(./img/rock.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
 }
 
+
+
 #header {
-    background-color: salmon;
+    background-color: white;
     border: black 1px solid;
     height: 15vh;
     text-align: center;
@@ -41,14 +57,19 @@ html,body {
     justify-content: space-around;
     width :50%;
     height: 75%;
+    background-color: #302244;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
 
 }
 
 .p1-side {
-    border: black 1px solid;
-    background-color: white;
+    /* border: black 1px solid; */
+    /* background-color: white; */
     display: flex;
     justify-content: space-evenly;
+    
     height: 25%;
 }
 
@@ -56,24 +77,68 @@ html,body {
     border:black 1px solid;
     /* background-color: white; */
     height: 80%;
-    width: 10%;    
+    width: 13%;    
+    
     margin-top: 1%;
+    border-radius: 10%;
+}
+.chosen-card-div {
+    border:black 1px solid;
+    /* background-color: white; */
+    height: 80%;
+    width: 13%;    
+    
+    margin-top: 1%;
+    border-radius: 10%;
+}
+
+.playedCardsField {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.playedCardsField > .chosen-card-div {
+    height: 90px;
+    margin-top: 20px;
+    
+}
+
+.score-field{
+    align-self: center;
+}
+
+.isSelected {
+    border: blue 2px solid;
 }
 
 .p2-side {
-    border: black 1px solid;
-    background-color: white;
+    /* border: black 1px solid;
+    background-color: white; */
     display: flex;
     justify-content: space-evenly;
     height: 25%;
 }
+
+.p2-side>.card-div {
+    /* background-color: black; */
+    /* background-image: url(./img/topsecret.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat; */
+
+}
 #footer {
-    background-color: salmon;
+    background-color: white;
     border: black 1px solid;
     height: 15vh;
 }
 
 
+button {
+    width:200px;
+    align-self: center;
+    
+}
 
 
 
@@ -81,11 +146,10 @@ html,body {
 
 
 
-
-
-/* .glow-on-hover {
+.glow-on-hover {
     width: 220px;
     height: 50px;
+    margin-bottom: 5px;
     border: none;
     outline: none;
     color: #fff;
@@ -141,4 +205,5 @@ html,body {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
-} */
+}
+
