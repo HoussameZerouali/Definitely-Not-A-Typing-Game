@@ -20,6 +20,7 @@ class scissors {
     }
 }
 
+
 const cardsClicker = document.querySelectorAll(".card-div");
 const p1Card1 = document.querySelector(".p1-card1");
 const p1Card2 = document.querySelector(".p1-card2");
@@ -38,14 +39,18 @@ let p1ChosenCard;
 let p2ChosenCard;
 let p1Score = 0;
 let p2Score = 0;
-let audio = new Audio('POL-treasure-match-short.wav') 
+let audio = new Audio('./styles/POL-treasure-match-short.wav') 
+audio.loop = 'loop';
 
+
+  
 
 //Main Game Loop 
 function gameLoop(){
     gameStart();
     drawHand(p1Deck,p2Deck);
     choseCard();
+    
     
     
 
@@ -167,6 +172,7 @@ confirmBtn.addEventListener("click",() => {
         alert("Oh nooo ! you lost to the computer. I'm sorry :'( ")
     }else if(p1Score == p2Score){
         alert("Wow a draw ? That's a rare occurrence !")
+        
     }
     
     setTimeout(() => {
@@ -174,9 +180,10 @@ confirmBtn.addEventListener("click",() => {
         p2CardPlayed.classList.remove("rock","paper","scissors")
     }, 1500);
 
-    audio.play()
+    
 })
 
 
 
 gameLoop();
+audio.play();
