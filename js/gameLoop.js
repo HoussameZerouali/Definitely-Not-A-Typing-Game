@@ -38,6 +38,7 @@ let p1ChosenCard;
 let p2ChosenCard;
 let p1Score = 0;
 let p2Score = 0;
+let audio = new Audio('POL-treasure-match-short.wav') 
 
 
 //Main Game Loop 
@@ -129,15 +130,15 @@ function choseCard() {
 function duel(p1Card,p2Card){
     if (p1Card.name == p2Card.weak){
         p1Score += 1;
-        
-        scoreField.textContent = `SCORE : ${p1Score}:${p2Score}`;
+        // alert("Player 1 wins !")
+        scoreField.textContent = `SCORE : ${p2Score}:${p1Score}`;
     }else if(p2Card.name == p1Card.weak){
         p2Score += 1;
-        
-        scoreField.textContent = `SCORE : ${p1Score}:${p2Score}`;
+        // alert("Player 2 wins !")
+        scoreField.textContent = `SCORE : ${p2Score}:${p1Score}`;
     }else{
         
-        console.log("Draw")
+        // alert("Draw")
     }
 }
 
@@ -160,14 +161,20 @@ confirmBtn.addEventListener("click",() => {
         p1Card1.classList.remove("isSelected")
         p1Card2.classList.remove("isSelected")
         p1Card3.classList.remove("isSelected")
-    }else{
-        alert("Deck is empty")
+    }else if(p1Score > p2Score){
+        alert("Player 1 has won the game ! CONGRATULATIONS !")
+    }else if(p2Score > p1Score){
+        alert("Oh nooo ! you lost to the computer. I'm sorry :'( ")
+    }else if(p1Score == p2Score){
+        alert("Wow a draw ? That's a rare occurrence !")
     }
     
     setTimeout(() => {
         p1CardPlayed.classList.remove("rock","paper","scissors")
         p2CardPlayed.classList.remove("rock","paper","scissors")
-    }, 2000);
+    }, 1500);
+
+    audio.play()
 })
 
 
