@@ -8,13 +8,32 @@
     <title>Document</title>
 </head>
 <body>
-    <div></div>
+    
+    <div class="score-div">
+        <aside id="score">Score : 0
+        </aside>
+    </div>
     <div class="container">
-        <div id="word-display">Hello</div>
-        <img src="../styles/img/ship.png" alt="" class="ship">
+        <section class="display-container">
+            <div id="word-display-1">Hello</div>
+            <div id="word-display-2">My</div>
+            <div id="word-display-3">Friend</div>
+        </section>
+        
+        
+        <div class="ship-div">
+            <img src="/styles/img/laserbulletpng.png" class="bullet hidden" alt="">
+            <div>
+                <img src="../styles/img/ship.png" alt="" class="ship">
+            </div>
+        </div>
+        
         <textarea name="inputArea" id="input-area" autofocus></textarea>
     </div>
 
+    <div class="countdown-div">
+        <aside id="timer">TIMER : 60s</aside>
+    </div>
 
     <script src="../js/shooterLogic.js"></script>
 </body>

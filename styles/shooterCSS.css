@@ -25,20 +25,78 @@ html,body {
     display: flex;
     /* border: solid red 2px; */
     height: 70vh;
+    width:  500px;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    /* border: white 1px solid; */
 }
+
+
 .ship {
     width: 50px;
     height: 50px;
+    
+    
 }
 
-.word-display {
-    align-self: center;
+
+.display-container {
+    display : flex;
 }
+
+.bullet {
+    height: 50px;
+    width:50px;
+    
+    position: absolute;
+    transition: transform 300ms linear ;
+    
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+#word-display-1 {
+    align-self: center;
+    
+    margin-right: 100px;
+    animation: rotate 1.5s forwards alternate linear infinite;
+
+}
+
+#word-display-2 {
+    
+    
+    margin-right: 100px;
+    
+    animation: rotate 1s forwards alternate infinite;
+    
+}
+
+#word-display-3 {
+    
+    
+    transform: rotate(-67deg);
+    animation: rotate 0.8s forwards alternate linear infinite;
+}
+
+
 #input-area {
     background-image: url(./img/nightskybg.jpg);
     font-family:'press_start_2pregular';
     border: 2px white solid;
     color: whitesmoke;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

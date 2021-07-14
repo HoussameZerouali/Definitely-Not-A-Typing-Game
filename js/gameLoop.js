@@ -39,7 +39,7 @@ let p1ChosenCard;
 let p2ChosenCard;
 let p1Score = 0;
 let p2Score = 0;
-let audio = new Audio('./styles/POL-treasure-match-short.wav') 
+let audio = new Audio('../styles/POL-treasure-match-short.wav') 
 audio.loop = 'loop';
 
 
@@ -178,7 +178,7 @@ confirmBtn.addEventListener("click",() => {
     setTimeout(() => {
         p1CardPlayed.classList.remove("rock","paper","scissors")
         p2CardPlayed.classList.remove("rock","paper","scissors")
-    }, 1500);
+    }, 1000);
 
     
 })
