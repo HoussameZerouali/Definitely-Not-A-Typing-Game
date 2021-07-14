@@ -20,7 +20,7 @@ class scissors {
     }
 }
 
-
+//Initializing the diffefrent DOM Elements
 const cardsClicker = document.querySelectorAll(".card-div");
 const p1Card1 = document.querySelector(".p1-card1");
 const p1Card2 = document.querySelector(".p1-card2");
