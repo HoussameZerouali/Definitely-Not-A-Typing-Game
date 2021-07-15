@@ -168,10 +168,13 @@ confirmBtn.addEventListener("click",() => {
         p1Card3.classList.remove("isSelected")
     }else if(p1Score > p2Score){
         alert("Player 1 has won the game ! CONGRATULATIONS !")
+        window.location.reload();
     }else if(p2Score > p1Score){
         alert("Oh nooo ! you lost to the computer. I'm sorry :'( ")
+        window.location.reload();
     }else if(p1Score == p2Score){
         alert("Wow a draw ? That's a rare occurrence !")
+        window.location.reload();
         
     }
     

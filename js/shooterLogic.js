@@ -107554,12 +107554,11 @@ var array = [
   ] //Big array of words
 let audio = new Audio('../styles/POL-treasure-match-short.wav') 
 audio.loop = 'loop';
+let laserSound = new Audio('../styles/laser.mp3')
 const wordToType1 = document.getElementById("word-display-1");
-const target1 = wordToType1.getBoundingClientRect();
 const wordToType2 = document.getElementById("word-display-2");
-const target2 = wordToType2.getBoundingClientRect();
 const wordToType3 = document.getElementById("word-display-3");
-const target3 = wordToType3.getBoundingClientRect();
+
 const wordTyped = document.getElementById("input-area");
 const scoreDisp = document.getElementById("score");
 const counterDisp = document.getElementById("timer");
@@ -107584,7 +107583,7 @@ wordTyped.addEventListener("input",()=> {
         bullet.classList.remove("hidden");
         bullet.style.transform = `translate(-200px,-280px)`;
         bullet.style.transform += "rotate(-45deg)"
-        
+        laserSound.play();
         setTimeout(() => {
             bullet.classList.add("hidden");
             bullet.style.transform = `translate(0px,0px)`;
@@ -107599,6 +107598,7 @@ wordTyped.addEventListener("input",()=> {
         console.log("good job")
         bullet.classList.remove("hidden");
         bullet.style.transform = `translate(0px,-280px)`;
+        laserSound.play();
         setTimeout(() => {
             bullet.classList.add("hidden");
             bullet.style.transform = `translate(0px,0px)`;
@@ -107618,6 +107618,7 @@ wordTyped.addEventListener("input",()=> {
         }, 300);
         bullet.style.transform = `translate(200px,-280px)`;
         bullet.style.transform += "rotate(45deg)"
+        laserSound.play();
         score += 5;
         scoreDisp.textContent = `Score : ${score}`
         wordToType3.value = array[Math.floor(Math.random(0) * array.length)]
